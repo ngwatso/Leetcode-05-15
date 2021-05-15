@@ -70,3 +70,34 @@ create a loop to iterate through nums, where i is even and where j = i+1, for ea
 
 
 '''
+
+# ===============
+
+class Solution:
+    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        
+        
+        newList = []
+        
+        for n in range(len(nums)):
+            newList.insert(index[n], nums[n])
+        return newList
+        
+        
+'''
+
+U:
+
+nums = [0, 1, 2, 3, 4]
+index = [4, 0, 2, 3, 1]
+output = [1, 4, 2, 3, 0]
+
+
+nums = [7, 4, 6, 2, 9]
+index = [0, 2, 1, 0, 3]
+output = [2, 7, 6, 9, 4]
+
+P:
+
+Iterate through nums(n) and index(i), insert n into newList at index i.
+'''
